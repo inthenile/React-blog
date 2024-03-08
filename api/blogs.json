@@ -1,0 +1,9 @@
+{
+  "blogs": [
+    {
+      "title": "Welcome to inthenile blog!",
+      "body": "A simple blog CRUD website to improve my react with; useState and useEffect hooks; API fetch calls and so forth.\n\nYou can cread, read, update and delete blogs. There is also a search bar to search blogs by their title.",
+      "id": 1
+    }
+  ]
+}

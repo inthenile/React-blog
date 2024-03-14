@@ -35,7 +35,7 @@ const EditBlog = ({blog, setEditing}) => {
     return ( 
         <div className="create-blog">
             <h1>Edit your blog</h1>
-            <form>
+            <form onSubmit={handleEdit}>
                 <label htmlFor="blog-title">Title:</label>
                 <input type="text" name="blog-title" id="blog-title"
                 value={title}
@@ -45,7 +45,7 @@ const EditBlog = ({blog, setEditing}) => {
                 <textarea name="blog-body" id="blog-body" cols="30" rows="10"
                 value={body}
                 onChange={(e) => setBody(e.target.value)}></textarea>
-                <button type="button" onClick={handleEdit}>Save</button>
+                <button type="submit">Save</button>
                 <button type="reset" onClick={handleReset}>Reset</button>
             </form>
         </div>

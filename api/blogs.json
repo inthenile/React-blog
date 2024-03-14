@@ -1,9 +1,124 @@
 {
   "blogs": [
     {
+      "id": "c84d",
+      "title": "Blog 2 ",
+      "body": "Blog 2 "
+    },
+    {
+      "id": "ecd4",
+      "title": "Blog 3",
+      "body": "Blog 3"
+    },
+    {
+      "id": "de22",
+      "title": "Blog4",
+      "body": "Blog 4"
+    },
+    {
+      "id": "112a",
+      "title": "Blog 5",
+      "body": "Blog 5"
+    },
+    {
+      "id": "f415",
+      "title": "Blog 6",
+      "body": "Blog 6"
+    },
+    {
+      "id": "3a79",
+      "title": "Blog 7",
+      "body": "Blog 7"
+    },
+    {
+      "id": "a297",
+      "title": "Blog 8",
+      "body": "Blog 8"
+    },
+    {
+      "id": "2632",
+      "title": "Blog 9",
+      "body": "Blog 9"
+    },
+    {
+      "id": "121d21",
+      "title": "Blog 10",
+      "body": "Blog 10"
+    },
+    {
+      "id": "263sdfasdf2",
+      "title": "Blog 11",
+      "body": "Blog 11"
+    },
+    {
+      "id": "263zxczc2",
+      "title": "Blog 12",
+      "body": "Blog 12"
+    },
+    {
+      "id": "2xvcbcxvb632",
+      "title": "Blog 13",
+      "body": "Blog 13"
+    },
+    {
+      "id": "26dfgjgdh32",
+      "title": "Blog 14",
+      "body": "Blog 14"
+    },
+    {
+      "id": "26832",
+      "title": "Blog 15",
+      "body": "Blog 15"
+    },
+    {
+      "id": "26332",
+      "title": "Blog 16",
+      "body": "Blog 16"
+    },
+    {
+      "id": "26ww4432",
+      "title": "Blog 17",
+      "body": "Blog 17"
+    },
+    {
+      "id": "263zxvsdf2",
+      "title": "Blog 18",
+      "body": "Blog 18"
+    },
+    {
+      "id": "263zvzxc2",
+      "title": "Blog 19 ",
+      "body": "Blog 19"
+    },
+    {
+      "id": "26etw3432",
+      "title": "Blog 20",
+      "body": "Blog 20"
+    },
+    {
+      "id": "263vbncvbn2",
+      "title": "Blog 21",
+      "body": "Blog 21"
+    },
+    {
+      "id": "26fgchfgn32",
+      "title": "Blog 22",
+      "body": "Blog 22"
+    },
+    {
+      "id": "263sergerg2",
+      "title": "Blog 23",
+      "body": "Blog 23"
+    },
+    {
+      "id": "26hfjf32",
+      "title": "Blog 24",
+      "body": "Blog 24"
+    },
+    {
+      "id": "1ga3r3waf",
       "title": "Welcome to inthenile blog!",
-      "body": "A simple blog CRUD website to improve my react with; useState and useEffect hooks; API fetch calls and so forth.\n\nYou can cread, read, update and delete blogs. There is also a search bar to search blogs by their title.",
-      "id": 1
+      "body": "A simple blog CRUD website to improve my react with; useState and useEffect hooks; API fetch calls and so forth.\n\nYou can create, read, update and delete blogs. There is also a search bar to search blogs by their title."
     }
   ]
 }

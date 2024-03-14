@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
-const Blogs = ( {blogs, query} ) => {
+const Blogs = ( {blogs, query, loading} ) => {
     
-    //newest blog post should come first
-    let reversedArray = [...blogs].reverse();
+    
 
     //check whether the title starts with the query of the user; and return if thats the case
     //I first filter the reversedArray with this function, then map through the filtered blogs
@@ -14,10 +13,10 @@ const Blogs = ( {blogs, query} ) => {
 
     return ( 
         <>
-        {blogs?.length === 0 && <p>"There are no blog entries yet."</p>}
+        {!loading && blogs?.length === 0 && <p>"There are no blog entries yet."</p>}
         {blogs?.length > 0 &&
         <div className="blogs">
-            {reversedArray
+            {blogs
                 .filter(checkSearch)
                 .map((blog) => (
                     <Link to={`blog/${blog.id}`} className="blogInfo" key={blog.id}>

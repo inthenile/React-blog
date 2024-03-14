@@ -24,7 +24,13 @@ A simple blog CRUD website (created with create-react-app) to improve my react w
 
 ```
 
+# Updates
+
+Added debouncing to search box, and fixed an issue that arose with a newer version of JSON server. I now redirect the user to the main page after a blog is created. Also added an infinite scrolling. Each time the user reaches to the bottom of the screen, a new fetch call is made; 10 blog posts at a time. As a side effect, I introduce a useSingleFetch hook in order to fetch one desired blog, since useFetch was creating issues when the user tried to fecth a single blog. Introduced useInitialFetch in order to grab the maximum number of pages to be able to make calls in a reverse order while doing the infinite scrolling. I populated to blogs.json to make it easier to demonstrate the infinite scrolling.
 
 # Todos
 
--Add pagination (or infinite scrolling?) maybe
+<s>-Add pagination (or infinite scrolling?) maybe </s>
+
+# Known issue(s)
+The search bar will only result already fetched blogs. If, for instance the user tries to search for a blog that is not yet currently rendered by scrolling down, there will be no results. Might have to work around this by fetching all blogs for searches?

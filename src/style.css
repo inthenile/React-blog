@@ -2,36 +2,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 :root{
-  --heading-colour: #f0561e;
-  --paragraph-colour: #4d4d4d;
+  --heading-colour: #97c9c9;
+  --secondary-colour: #55c0b2;
+  --paragraph-colour: #f6fdfb;
+  --background-color: #1f1f1f;
 }
-
 *{
   margin: 0;
   font-family: 'Playfair Display', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: var(--background-color);
 }
 p{
   color: var(--paragraph-colour);
 }
 p::selection{
-  color: var(--heading-colour);
-  background-color: #f0ead4;
+  color: var(--background-color);
+  background-color: var(--secondary-colour);
 }
 /*NAVBAR*/
 .nav{
   padding-top: 10px;
   text-align: center;
   margin: 0 auto;
-  border-bottom: 1px solid #00000056;
+  border-bottom: 2px solid var(--secondary-colour);
   position: sticky;
+  background-color: var(--background-color);
   top: 0;
-  background-color: white;
+  z-index: 1;
 }
-
-.content{
+.blogs, .search-wrapper > .blogs, .blog-div{
   width: 60%;
   margin: 0 auto;
+
 }
+
 .title{
   margin: 10px auto;
   color: var(--heading-colour);
@@ -53,37 +59,61 @@ p::selection{
   font-size: 1.1em;
   margin: 15px 0;
 }
-.search-container{
-  background-color: white;
-  position: sticky;
-  top: 137px;
-  z-index: 1;
-}
+
 .search{
-  background-color: white;
   margin-left: auto;
   width: fit-content;
-  padding: 10px;
+  height: 35px;
   box-sizing: border-box;
-  padding-top: 10px;
+  padding-top: 10px;    
+}
+.search::before{
+    content: "";
+    background-image: url(img/search-icon.png);
+    background-size: cover;
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+    height: 25px;
+    width: 25px;
+}
+.search-wrapper{
+    position: fixed;
+    z-index: 1;
+    right: 20px;
+    bottom: 20px;
+}
+.search-input{
+    position: fixed;
+    top:125px;
+    height: 70px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background-color);
 }
 .search-container{
-  position: sticky;
-  top: 127px;
-  background-color: white;
   padding-bottom: 10px;
-  border-bottom: 1px solid #00000056;
+  width: 45px;
+  margin-left: auto;
+  background-color: var(--secondary-colour);
+  border-radius: 100%;
 }
-.nav,.search,.search-input{
-  z-index: 1;
+.search-container:hover{
+    background-color: white;
+    cursor: pointer;
 }
+
 .searchbar{
-display: block;
-margin-right: 10px;
-margin-left: auto;
+z-index: 1;
+border-radius: 5px;
+height: 2em;
+width: 200px;
 }
 .navlinks a:hover, .search:hover{
-  color: orangered;
+  color: var(--secondary-colour);
   cursor: pointer;
 }
 .navlinks a:nth-child(1){
@@ -92,19 +122,14 @@ margin-left: auto;
 .active{
   font-weight: bold;
 }
-.homelink:hover{
-  color: var(--heading-colour);
+.title:hover{
+  color: var(--secondary-colour);
 }
 /*HOME PAGE*/
-.home{
+
+.blogs{  
   text-align: center;
-  color: var(--heading-colour);
-}
-.blogs{
-  width: 85%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
+  color: var(--secondary-colour);
 }
 
 .blogs p{
@@ -114,16 +139,13 @@ margin-left: auto;
 
 .blogInfo{
   text-decoration: none;
-  color: #f0561e;
-  margin-top: 30px;
+  color: var(--secondary-colour);
+  margin-top: 60px;
   box-sizing: border-box;
-
-
+  display: block;
 }
 .blogInfo:hover{
-  cursor: pointer;
-  box-shadow: 0 5px  var(--heading-colour);
-
+background-color: #363636;
 }
 
 .blogInfo:hover .clickToRead{
@@ -131,18 +153,21 @@ margin-left: auto;
 }
 /*FOOTER*/
 .footer{
-  height: 150px;
-  width: 85%;
+  width: 60%;
+  height: fit-content;
+  display: flex;
   margin: 0 auto;
-  padding-top: 15px;
-  background-color: #f0ead4;
+  background-color: var(--paragraph-colour);
   text-align: center;
 }
 .social-links{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
-  margin-top: 25px;
+  width: 50%;
+  margin: auto;
+}
+.social-links img{
+    width: 30px;
+    margin: 0 5px;
+    height: 30px;
 }
 /*404 error*/ /* blog loading message */
 .not-found-error, .blog-loading{
@@ -169,7 +194,6 @@ word-break: break-all;
 .blog-body{
 line-height: 2em;
 text-align: justify;
-display: block;
 
 }
 .delete-blog{
@@ -232,31 +256,29 @@ display: block;
 }
 @media screen and (min-width:768px) {
 
-  .search{
-    top: 137px;
-  }
-  .search-input{
-    top: 178px;
-  }
+.search-container {
+    bottom: unset;
+    position: sticky;
+}
+.search-input{
+    top:138px;
+}
+/*SEARCHBAR AND SEARCH ICON STICKY FIX*/
+
+.search-wrapper{
+    top: 153px;
+}
   .navlinks{
     justify-content: unset;
   }
   .navlinks a{
     margin: 20px 0;
   }
-  .search-container{
-    top: 137px;
-  }
-  .blogs{
-    width: 100%;
-  }
+
+
   .blogInfo{
     padding: 10px;
     word-break: break-all;
-    box-shadow: -3px 3px #d1d1d163;
-  }
-  .blogInfo:hover{
-    background-color:#d1d1d163 ;
   }
 
   .footer{

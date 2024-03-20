@@ -39,4 +39,4 @@ Added debouncing to search box, and fixed an issue that arose with a newer versi
 <s>-Add pagination (or infinite scrolling?) maybe </s>
 
 # Known issue(s)
-The search bar will only result already fetched blogs. If, for instance the user tries to search for a blog that is not yet currently rendered by scrolling down, there will be no results. Might have to work around this by fetching all blogs for searches?
+<s>The search bar will only result already fetched blogs. If, for instance the user tries to search for a blog that is not yet currently rendered by scrolling down, there will be no results. Might have to work around this by fetching all blogs for searches?</s> SOLVED
